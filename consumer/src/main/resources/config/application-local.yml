@@ -1,0 +1,19 @@
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+    org.springframework: info
+    com.redeyefrog: debug
+  pattern:
+    console: "%red(%d{yyyy-MM-dd HH:mm:ss}) %yellow([%thread]) %highlight(%-5level) %logger - %green(%msg%n)"
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+
+topic:
+  hello:
+    world: TOPIC_HELLO_WORLD

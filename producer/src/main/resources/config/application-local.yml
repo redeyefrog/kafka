@@ -1,0 +1,17 @@
+logging:
+  level:
+    root: info
+    org.springframework: info
+    com.redeyefrog: debug
+  pattern:
+    console: "%red(%d{yyyy-MM-dd HH:mm:ss}) %yellow([%thread]) %highlight(%-5level) %logger - %green(%msg%n)"
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+topic:
+  hello:
+    world: TOPIC_HELLO_WORLD
